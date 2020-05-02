@@ -8,6 +8,6 @@ The purpose of the API is to make it a bit easier to complete the freeCodeCamp [
 In the process, I want to give CodeNewbies the opportunity to contribute and practice working with git and github.
 
 ## How can I contribute?
-Take a look at the open issues. If you see something you would like to try, open a pull request.
+Take a look at the open issues. If you see something you would like to try, fork the project, make a commit and open a pull request.
 
 If you're unsure or struggling, don't be afraid to reach out. 
