@@ -2,9 +2,9 @@
   "name": "quotes-api",
   "version": "0.1.0",
   "description": "An easy-to-use API for fetching programming quotes.",
-  "main": "app.js",
+  "main": "src/app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node src/app.js"
   },
   "author": "Simon Weller",
   "license": "ISC",
