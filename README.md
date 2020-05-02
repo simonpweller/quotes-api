@@ -11,3 +11,6 @@ In the process, I want to give CodeNewbies the opportunity to contribute and pra
 Take a look at the open issues. If you see something you would like to try, fork the project, make a commit and open a pull request.
 
 If you're unsure or struggling, don't be afraid to reach out. 
+
+## Running this locally
+To run the API locally, clone the repo and run npm install followed by npm start 
