@@ -3,7 +3,7 @@
 ## What's this?
 A very simple API for fetching quotes related to programming.
 
-## Where can I see it in action
+## Where can I see it in action?
 Go to https://simple-quotes-api.herokuapp.com for a list of quotes or https://simple-quotes-api.herokuapp.com/random to get a random quote.
 
 ## Why?
