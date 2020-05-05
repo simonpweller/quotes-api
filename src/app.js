@@ -5,11 +5,11 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.get("/", (req, res) => {
-  res.json(quotes.all);
+  res.json(quotes);
 });
 
 app.get("/random", (req, res) => {
-  const quote = quotes.random();
+  const quote = getRandomElement(quotes);
   res.json(quote);
 });
 

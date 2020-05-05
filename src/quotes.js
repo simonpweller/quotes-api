@@ -15,11 +15,4 @@ const quotes = [
   },
 ];
 
-exports.all = quotes;
-exports.random = function random() {
-  if (Math.random() <= 0.5) {
-    return quotes[0];
-  }
-  return quotes[1];
-};
-
+module.exports = quotes;
