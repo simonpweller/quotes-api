@@ -1,4 +1,5 @@
 const quotes = require("./quotes");
+const { getRandomElement } = require("./utils");
 
 const express = require("express");
 const app = express();
