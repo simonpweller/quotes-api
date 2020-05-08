@@ -16,5 +16,6 @@ app.get("/random", (req, res) => {
     const quote = getRandomElement(quotes);
     res.json(quote);
   });
+  router.listen(port, () => console.log(`Quotes API listening on port ${port}`));
 
 module.exports = router
