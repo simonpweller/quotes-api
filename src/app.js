@@ -1,5 +1,8 @@
-const quotes = require("./quotes");
-const { getRandomElement } = require("./utils");
-const router = require = ("./router")
 
-//router.listen(port, () => console.log(`Quotes API listening on port ${port}`));
+
+const router = require("./router")
+const express = require("express");
+const app = express();
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => console.log(`Quotes API listening on port ${port}`));

@@ -1,21 +1,18 @@
 const express = require('express')
 const router = express.Router()
-const port = process.env.PORT || 3000;
+const quotes = require("./quotes");
+const { getRandomElement } = require("./utils");
+//const port = process.env.PORT || 3000;
 
-// middleware that is specific to this router
-router.use(function timeLog (req, res, next) {
-  console.log('Time: ', Date.now())
-  next()
-})
 // define the home page route
 router.get("/", (req, res) => {
     res.json(quotes);
   });
   
-app.get("/random", (req, res) => {
+router.get("/random", (req, res) => {
     const quote = getRandomElement(quotes);
     res.json(quote);
   });
-  router.listen(port, () => console.log(`Quotes API listening on port ${port}`));
+//router.listen(port, () => console.log(`Quotes API listening on port ${port}`));
 
 module.exports = router
