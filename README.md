@@ -17,12 +17,12 @@ In the process, I want to give CodeNewbies the opportunity to contribute and pra
 
 Take a look at the open issues. If you see something you would like to try, fork the project, make a commit and open a pull request.
 
-To format your code, use "npm run format-fix" - this will run prettier and apply a standardised code style.
+To format your code, use `npm run format-fix` - this will run prettier and apply a standardised code style.
 
-To run the automated test, use "npm test" - you'll get a report on what tests are passing and failing. Currently, there are only 2 tests for the getRandomElement function and one of them is failing. Once the function is implemented, it should pass.     
+To run the automated test, use `npm test` - you'll get a report on what tests are passing and failing. 
 
 If you're unsure or struggling, don't be afraid to reach out.
 
 ## Running this locally
 
-To run the API locally, clone the repo and run npm install followed by npm start.
+To run the API locally, clone the repo and run `npm install` followed by `npm start`.
