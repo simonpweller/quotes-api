@@ -14,15 +14,15 @@ router.get("/random", (req, res) => {
 });
 
 router.get("/:quoteID", (req, res) => {
-  const quoteID = parseInt(req.params.quoteID);
-  const quotesLength = quotes.length;
+  const quoteID = parseInt(req.params.quoteID, 10);
 
-  if (0 <= quoteID && quoteID < quotesLength) {
-    res.json(quotes[quoteID]);
+  var quote = quotes[quoteID];
+  if (quote !== undefined) {
+    res.json(quote);
   } else {
-    res.json({
-      err: `Invalid quoteID; quoteID range: [0, ${quotesLength - 1}]`,
-    });
+    res
+      .status(404)
+      .send(`Invalid quoteID; quoteID range: [0, ${quotes.length - 1}]`);
   }
 });
 
