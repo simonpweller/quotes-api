@@ -16,7 +16,7 @@ router.get("/random", (req, res) => {
 router.get("/:quoteID", (req, res) => {
   const quoteID = parseInt(req.params.quoteID, 10);
 
-  var quote = quotes[quoteID];
+  const quote = quotes[quoteID];
   if (quote !== undefined) {
     res.json(quote);
   } else {
