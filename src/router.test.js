@@ -25,4 +25,24 @@ describe("routes", () => {
       done();
     });
   });
+
+  describe("/:quoteID", () => {
+    it("should respond with a quote for a valid ID", async (done) => {
+      const res = await request(app).get("/0");
+      const quote = res.body;
+
+      expect(res.status).toBe(200);
+      expect(quote).toHaveProperty("quoteText");
+      expect(quote).toHaveProperty("quoteAuthor");
+      expect(quote).toHaveProperty("quoteLink");
+      done();
+    });
+
+    it("should respond with status 404 for an invalid ID", async (done) => {
+      const res = await request(app).get("/-1");
+
+      expect(res.status).toBe(404);
+      done();
+    });
+  });
 });
