@@ -4,8 +4,12 @@ const quotes = require("./quotes");
 
 describe("routes", () => {
   describe("/", () => {
-    it("should respond with a list of quotes", (done) => {
-      request(app).get("/").expect(200, quotes, done);
+    it("should respond with a list of quotes", async (done) => {
+      const res = await request(app).get("/");
+
+      expect(res.status).toBe(200);
+      expect(res.body).toEqual(quotes);
+      done();
     });
   });
 
