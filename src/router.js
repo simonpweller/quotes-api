@@ -5,11 +5,19 @@ const { getRandomElement } = require("./utils");
 const router = express.Router();
 
 router.get("/", (req, res) => {
-  res.json(quotes);
+  const { category } = req.query;
+  const categoryQuotes = category
+    ? quotes.filter((quote) => quote.category === category)
+    : quotes;
+  res.json(categoryQuotes);
 });
 
 router.get("/random", (req, res) => {
-  const quote = getRandomElement(quotes);
+  const { category } = req.query;
+  const categoryQuotes = category
+    ? quotes.filter((quote) => quote.category === category)
+    : quotes;
+  const quote = getRandomElement(categoryQuotes);
   res.json(quote);
 });
 
