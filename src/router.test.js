@@ -19,9 +19,10 @@ describe("routes", () => {
       const quote = res.body;
 
       expect(res.status).toBe(200);
-      expect(quote).toHaveProperty("quoteText");
-      expect(quote).toHaveProperty("quoteAuthor");
-      expect(quote).toHaveProperty("quoteLink");
+      expect(quote).toHaveProperty("text");
+      expect(quote).toHaveProperty("author");
+      expect(quote).toHaveProperty("link");
+      expect(quote).toHaveProperty("category");
       done();
     });
   });
@@ -32,9 +33,10 @@ describe("routes", () => {
       const quote = res.body;
 
       expect(res.status).toBe(200);
-      expect(quote).toHaveProperty("quoteText");
-      expect(quote).toHaveProperty("quoteAuthor");
-      expect(quote).toHaveProperty("quoteLink");
+      expect(quote).toHaveProperty("text");
+      expect(quote).toHaveProperty("author");
+      expect(quote).toHaveProperty("link");
+      expect(quote).toHaveProperty("category");
       done();
     });
 
