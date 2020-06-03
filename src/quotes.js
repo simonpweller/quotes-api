@@ -39,6 +39,30 @@ const quotes = [
       "https://www.goodreads.com/quotes/273375-everyone-knows-that-debugging-is-twice-as-hard-as-writing",
     category: "programming",
   },
+  {
+    text:
+      "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.",
+    author: "Albert Einstein",
+    link:
+      "https://www.goodreads.com/quotes/942-two-things-are-infinite-the-universe-and-human-stupidity-and",
+    category: "humour",
+  },
+  {
+    text:
+      "Never put off till tomorrow what may be done day after tomorrow just as well.",
+    author: "Mark Twain",
+    link:
+      "https://www.goodreads.com/quotes/2580-never-put-off-till-tomorrow-what-may-be-done-day",
+    category: "humour",
+  },
+  {
+    text:
+      "I love deadlines. I love the whooshing noise they make as they go by.",
+    author: "Douglas Adams",
+    link:
+      "https://www.goodreads.com/quotes/1398-i-love-deadlines-i-love-the-whooshing-noise-they-make",
+    category: "humour",
+  },
 ];
 
 module.exports = quotes;
