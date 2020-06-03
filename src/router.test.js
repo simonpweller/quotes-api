@@ -11,6 +11,15 @@ describe("routes", () => {
       expect(res.body).toEqual(quotes);
       done();
     });
+
+    it(`should filter quotes by category`, async (done) => {
+      const res = await request(app).get("/?category=humour");
+
+      expect(res.body).toEqual(
+        quotes.filter((quote) => quote.category === "humour")
+      );
+      done();
+    });
   });
 
   describe("/random", () => {
@@ -23,6 +32,16 @@ describe("routes", () => {
       expect(quote).toHaveProperty("author");
       expect(quote).toHaveProperty("link");
       expect(quote).toHaveProperty("category");
+      done();
+    });
+
+    it(`should filter quotes by category`, async (done) => {
+      const programmingRes = await request(app).get(
+        "/random?category=programming"
+      );
+      expect(programmingRes.body.category).toBe("programming");
+      const humourRes = await request(app).get("/random?category=humour");
+      expect(humourRes.body.category).toBe("humour");
       done();
     });
   });
