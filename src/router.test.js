@@ -15,9 +15,9 @@ describe("routes", () => {
     it(`should filter quotes by category`, async (done) => {
       const res = await request(app).get("/?category=humour");
 
-      expect(
-        res.body.filter((quote) => quote.category !== "humour")
-      ).toHaveLength(0);
+      expect(res.body).toEqual(
+        quotes.filter((quote) => quote.category === "humour")
+      );
       done();
     });
   });
